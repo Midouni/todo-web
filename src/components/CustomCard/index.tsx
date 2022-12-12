@@ -1,4 +1,4 @@
-import { Card, CardContent, CardHeader, Typography, useTheme } from '@mui/material';
+import { Card, CardActionArea, CardContent, CardHeader, Typography, useTheme } from '@mui/material';
 import { Container } from '@mui/system';
 import React from 'react';
 

@@ -30,6 +30,7 @@ export default function Login() {
     const {error, loading, message} = useAppSelector(state => state.Auth);
  
     return (
+        <div className='app'>
         <CustomCard
             title={'Welcome back!'}
             subTitle={'Log in to continue.'}
@@ -71,5 +72,6 @@ export default function Login() {
                 Log In
             </Button>
         </CustomCard>
+        </div>
     )
 }
