@@ -30,3 +30,26 @@ h1 {
 .input-label {
   color: 'red'!important;
 }
+
+a {
+  cursor: pointer!important;
+}
+
+img.deleteIcon {
+  width: 11px;
+  height: 11px;
+}
+
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d7dae0;
+  border-radius: 8px;
+}
