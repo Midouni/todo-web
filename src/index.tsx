@@ -12,9 +12,9 @@ const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
-    <ThemeProvider theme={theme}>
-  <Provider store={store}>
+  <ThemeProvider theme={theme}>
+    <Provider store={store}>
       <RouterProvider router={router} />
-  </Provider>
-    </ThemeProvider>
+    </Provider>
+  </ThemeProvider>
 );

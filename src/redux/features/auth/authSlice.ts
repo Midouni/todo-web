@@ -18,6 +18,10 @@ const authSlice = createSlice({
             state.token = action.payload?.token;
             localStorage.setItem('access-token', action.payload?.token);
         },
+        destoryToken: (state) => {
+            localStorage.clear();
+            state = initialState;
+        }
     },
     extraReducers: (builder) => {
         // CASE 1: user register for an account.
@@ -61,5 +65,5 @@ const authSlice = createSlice({
 });
 
 const { reducer } = authSlice;
-export const { saveToken } = authSlice.actions;
+export const { saveToken, destoryToken } = authSlice.actions;
 export default reducer;

@@ -2,6 +2,9 @@
 import React, { createContext, FunctionComponent, useEffect } from 'react';
 
 import { useNavigate } from 'react-router';
+import { useAppDispatch } from '../useReduxHooks';
+import { destoryToken } from '../../redux/features/auth/authSlice';
+import { Header } from '../../components/Header';
 
 interface AuthUserInterface {
 
@@ -17,6 +20,12 @@ const AuthUserProvider: FunctionComponent<AuthUserProviderProps> = ({
 
   const navigate = useNavigate()
   const hasAccess = localStorage.getItem('access-token');
+  const dispatch = useAppDispatch();
+
+  const onLogout = () => {
+    dispatch(destoryToken());
+    navigate('/login');
+  }
 
   useEffect(() => {
     if (!hasAccess) {
@@ -31,7 +40,10 @@ const AuthUserProvider: FunctionComponent<AuthUserProviderProps> = ({
         <AuthUser.Provider
           value={{}}
         >
-          <div className='app'>{children}</div>
+          <Header onLogout={onLogout}/>
+          <div className='app'>
+            {children}
+          </div>
         </AuthUser.Provider>
       }
     </>

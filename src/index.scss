@@ -10,7 +10,7 @@ body {
   background-color: #f6f7f8;
 }
 
-#root {
+.app {
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -29,4 +29,27 @@ h1 {
 
 .input-label {
   color: 'red'!important;
+}
+
+a {
+  cursor: pointer!important;
+}
+
+img.deleteIcon {
+  width: 11px;
+  height: 11px;
+}
+
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d7dae0;
+  border-radius: 8px;
 }

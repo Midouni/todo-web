@@ -32,6 +32,7 @@ export default function Register() {
 
     const { loading, error, message } = useAppSelector(state => state.Auth);
     return (
+        <div className='app'>
         <CustomCard
             title={'Welcome!'}
             subTitle={'Sign up to start using Simpledo today.'}
@@ -81,5 +82,6 @@ export default function Register() {
                 Sign Up
             </Button>
         </CustomCard>
+        </div>
     )
 }
